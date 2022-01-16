@@ -1,0 +1,35 @@
+$normal-font: "Roboto", sans-serif;
+$fancy-font: "The Nautigal", cursive;
+$thin: 100;
+$medium: 400;
+$medium-thick: 700;
+$thick: 900;
+$dark-grey: #232931;
+$lighter-grey: #393e46;
+$teal: #4ecca3;
+$white: #eeeeee;
+
+@mixin title-text($i: "normal") {
+  font-family: $normal-font;
+  font-weight: $thick;
+  font-style: $i;
+  color: $white;
+}
+
+@mixin heading-text($i: "normal") {
+  font-family: $normal-font;
+  font-weight: $medium;
+  font-style: $i;
+  color: $white;
+}
+
+@mixin content-text {
+  font-family: $normal-font;
+  font-weight: $thin;
+  color: $white;
+}
+
+@mixin fancy-text($i: $medium) {
+  font-family: $fancy-font;
+  font-weight: $i;
+}

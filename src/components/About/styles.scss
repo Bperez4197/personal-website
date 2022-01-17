@@ -1,5 +1,27 @@
 @import "../../styling-variables/index.scss";
 
+@keyframes slide-from-right {
+  0% {
+    transform: translate(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translate(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
 #about {
   display: flex;
   flex-direction: row;
@@ -13,6 +35,8 @@
   .about-img {
     height: 40vh;
     width: 60vw;
+    animation-name: slide-from-left;
+    animation-duration: 1.25s;
     img {
       height: 100%;
       width: 100%;
@@ -24,5 +48,7 @@
     width: 60vw;
     padding-left: 5vw;
     padding-right: 5vw;
+    animation-name: slide-from-right;
+    animation-duration: 1.25s;
   }
 }

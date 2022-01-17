@@ -1,4 +1,5 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 import "./styles.scss";
 
@@ -6,8 +7,10 @@ import "./styles.scss";
 //comfortable with and exposed to categories for each
 export default function Skills() {
   return (
-    <section id="skills">
-      <h3>Skills Section</h3>
-    </section>
+    <Element name="skills">
+      <section id="skills">
+        <h3>Skills Section</h3>
+      </section>
+    </Element>
   );
 }

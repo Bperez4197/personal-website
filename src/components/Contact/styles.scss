@@ -1,5 +1,36 @@
 @import "../../styling-variables/index.scss";
 
+@keyframes slide-from-right {
+  0% {
+    transform: translate(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translate(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-right {
+  0% {
+    transform: translate(-10px);
+  }
+  100% {
+    transform: translate(10px);
+  }
+}
+
 .contact {
   height: 80vh;
   width: 100vw;
@@ -12,19 +43,27 @@
   padding-right: 10vw;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   .contact-info {
     height: 25vh;
     width: 40vw;
-
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    // animation-name: slide-from-left;
+    // animation-duration: 1.25s;
 
     .info-block {
       height: 33%;
       width: 100%;
       color: $teal;
+      animation-name: slide-from-left;
+      animation-duration: 1.25s;
+
+      a {
+        color: $teal;
+      }
 
       span {
         color: $white;
@@ -38,9 +77,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: 2rem;
     border: 4px solid $lighter-grey;
     border-radius: 25px;
+    // animation-name: slide-from-right;
+    // animation-duration: 1.25s;
 
     #message {
       height: 10vh;
@@ -52,6 +94,8 @@
       border-radius: 25px;
       padding-left: 2rem;
       background-color: $dark-grey;
+      width: 100%;
+      color: $white;
 
       &::placeholder {
         color: lightgrey;
@@ -61,6 +105,33 @@
     button {
       border: 1px solid $lighter-grey;
       border-radius: 25px;
+      cursor: pointer;
+      background-color: $teal;
+      width: 60%;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      font-size: 36px;
+      font-family: $fancy-font;
+      font-weight: 700;
+      padding: 3px 100px 3px 150px;
+      justify-content: space-evenly;
+      transition: transform 0.3s ease-in-out;
+
+      span {
+        padding-top: 5px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        color: $white;
+
+        span {
+          animation-name: bounce-right;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+        }
+      }
     }
   }
 }
@@ -70,4 +141,5 @@ h2 {
   color: $white;
   background-color: $dark-grey;
   padding-top: 2rem;
+  width: 100vw;
 }

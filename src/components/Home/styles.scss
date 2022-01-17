@@ -1,5 +1,27 @@
 @import "../../styling-variables/index.scss";
 
+@keyframes slide-from-right {
+  0% {
+    transform: translate(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translate(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
 #home {
   background-color: $dark-grey;
   height: 100vh;
@@ -17,6 +39,37 @@
     align-items: center;
     margin-top: 20px;
     width: 40vw;
+    animation-name: slide-from-right;
+    animation-duration: 1.25s;
+
+    #resume {
+      background-color: $white;
+      color: black;
+      text-decoration: underline;
+
+      &:hover {
+        background-color: $teal;
+      }
+    }
+
+    .active {
+      color: black;
+      text-decoration: underline;
+      background-color: $teal;
+      font-weight: $thick;
+    }
+
+    li {
+      height: 25px;
+      width: 75px;
+      text-align: center;
+      margin-top: 5px;
+      &:hover {
+        background-color: $teal;
+        text-decoration: underline;
+        color: black;
+      }
+    }
   }
 
   .content {
@@ -31,19 +84,29 @@
 
     .intro {
       margin-bottom: 5vh;
+      animation-name: slide-from-left;
+      animation-duration: 1.25s;
+    }
+
+    p {
+      animation-name: slide-from-right;
+      animation-duration: 1.25s;
     }
 
     .icons {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-evenly;
       align-items: center;
-      width: 10vw;
+      width: 15vw;
       margin-top: 5vh;
+      animation-name: slide-from-left;
+      animation-duration: 1.25s;
 
       a {
+        color: $white;
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.5);
           color: $teal;
         }
       }
@@ -63,10 +126,20 @@
       font-size: 45px;
       @include fancy-text($thick);
       color: black;
+      animation-name: slide-from-right;
+      animation-duration: 1.25s;
+
+      span {
+        transition: transform 0.3s ease-in-out;
+      }
 
       &:hover {
         transform: scale(1.1);
         color: $white;
+
+        span {
+          transform: rotate(90deg);
+        }
       }
     }
   }

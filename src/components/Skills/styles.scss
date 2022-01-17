@@ -1,5 +1,27 @@
 @import "../../styling-variables/index.scss";
 
+@keyframes slide-from-right {
+  0% {
+    transform: translate(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translate(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
 #skills {
   height: 80vh;
   width: 100vw;

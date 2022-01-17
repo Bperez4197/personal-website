@@ -1,1 +1,88 @@
 @import "../../styling-variables/index.scss";
+
+#home {
+  background-color: $dark-grey;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @include heading-text;
+
+  .home-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    width: 40vw;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20vh;
+    height: 40vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+
+    .intro {
+      margin-bottom: 5vh;
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 10vw;
+      margin-top: 5vh;
+
+      a {
+        &:hover {
+          transform: scale(1.1);
+          color: $teal;
+        }
+      }
+    }
+
+    #projects-btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: $teal;
+      height: 8vh;
+      width: 30vw;
+      border: 1px solid $lighter-grey;
+      border-radius: 40px;
+      margin-top: 5vh;
+      font-size: 45px;
+      @include fancy-text($thick);
+      color: black;
+
+      &:hover {
+        transform: scale(1.1);
+        color: $white;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  @include heading-text;
+  list-style-type: none;
+
+  &:hover {
+    font-style: italic;
+    color: $teal;
+  }
+
+  &:visited {
+    color: $white;
+  }
+}

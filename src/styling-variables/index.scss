@@ -29,7 +29,7 @@ $white: #eeeeee;
   color: $white;
 }
 
-@mixin fancy-text($i: $medium) {
+@mixin fancy-text($i: $thick) {
   font-family: $fancy-font;
   font-weight: $i;
 }

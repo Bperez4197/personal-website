@@ -31,6 +31,18 @@
   }
 }
 
+.animated-from-left {
+  animation: slide-from-left 1.25s 1;
+}
+
+.animated-from-right {
+  animation: slide-from-right 1.25s 1;
+}
+
+.bounce-right {
+  animation: bounce-right 1.25s infinite;
+}
+
 .contact {
   height: 80vh;
   width: 100vw;
@@ -58,8 +70,8 @@
       height: 33%;
       width: 100%;
       color: $teal;
-      animation-name: slide-from-left;
-      animation-duration: 1.25s;
+      // animation-name: slide-from-left;
+      // animation-duration: 1.25s;
 
       a {
         color: $teal;
@@ -126,11 +138,11 @@
         transform: scale(1.1);
         color: $white;
 
-        span {
-          animation-name: bounce-right;
-          animation-duration: 1s;
-          animation-iteration-count: infinite;
-        }
+        // span {
+        //   // animation-name: bounce-right;
+        //   // animation-duration: 1s;
+        //   // animation-iteration-count: infinite;
+        // }
       }
     }
   }

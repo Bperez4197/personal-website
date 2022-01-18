@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
@@ -8,12 +8,36 @@ import { Element } from "react-scroll";
 import "./styles.scss";
 
 export default function Contact() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  const addVisibility = (entries) => {
+    const [entry] = entries;
+    setIsVisible(entry.isIntersecting);
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(addVisibility, {});
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [sectionRef]);
   return (
-    <section>
+    <section ref={sectionRef}>
       <Element name="contact">
         <h2>Contact Section</h2>
         <div className="contact">
-          <div className="contact-info">
+          <div
+            className={
+              isVisible ? "contact-info animated-from-left" : "contact-info"
+            }
+          >
             <div className="info-block">
               <LocationOnRoundedIcon fontSize="large" />
               <span>&nbsp; Glendale, Arizona</span>
@@ -29,7 +53,7 @@ export default function Contact() {
               <span>&nbsp; 480-640-8778</span>
             </div>
           </div>
-          <form>
+          <form className={isVisible ? "animated-from-right" : ""}>
             <input type="text" id="fullname" placeholder="Full Name" required />
             <input type="text" id="email" placeholder="Email" required />
             <input
@@ -46,7 +70,7 @@ export default function Contact() {
             />
             <button type="submit">
               Send &nbsp;
-              <span>
+              <span className={isVisible ? "bounce-right" : ""}>
                 <SendRoundedIcon fontSize="large" />
               </span>
             </button>

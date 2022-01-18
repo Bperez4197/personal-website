@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import Header from "../Header/Header";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
@@ -8,65 +9,30 @@ import { Link, Element } from "react-scroll";
 import "./styles.scss";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  const addVisibility = (entries) => {
+    const [entry] = entries;
+    setIsVisible(entry.isIntersecting);
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(addVisibility, {});
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [sectionRef]);
+
   return (
-    <section id="home">
-      <header>
-        <ul className="home-header">
-          <Link
-            to="home"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            duration={1000}
-          >
-            <li>Home</li>
-          </Link>
-          <span>|</span>
-          <Link
-            to="about"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            duration={1000}
-          >
-            <li>About</li>
-          </Link>
-          <span>|</span>
-          <Link
-            to="skills"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            duration={1000}
-          >
-            <li>Skills</li>
-          </Link>
-          <span>|</span>
-          <Link
-            to="portfolio"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            duration={1000}
-          >
-            <li>Portfolio</li>
-          </Link>
-          <span>|</span>
-          <Link
-            to="contact"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            duration={1000}
-          >
-            <li>Contact</li>
-          </Link>
-          <span>|</span>
-          <a href="#" target="_blank" id="resume" id="resume">
-            <li>Resume</li>
-          </a>
-        </ul>
-      </header>
+    <section id="home" ref={sectionRef}>
+      <Header isVisible={isVisible} />
       <Element name="home">
         <div className="content">
           <h1 className="intro">Hi, I'm Bryce Perez.</h1>
@@ -95,22 +61,20 @@ export default function Home() {
               <EmailIcon fontSize="large" />
             </a>
           </div>
-          <a href="#portfolio">
-            <Link
-              to="portfolio"
-              activeClass="active"
-              spy={true}
-              smooth={true}
-              duration={1000}
-            >
-              <button id="projects-btn">
-                Get straight to projects{" "}
-                <span>
-                  <EastRoundedIcon />
-                </span>
-              </button>
-            </Link>
-          </a>
+          <Link
+            to="portfolio"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            duration={1000}
+          >
+            <button id="projects-btn">
+              Get straight to projects{" "}
+              <span>
+                <EastRoundedIcon />
+              </span>
+            </button>
+          </Link>
         </div>
       </Element>
     </section>

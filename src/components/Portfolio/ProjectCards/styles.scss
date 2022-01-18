@@ -11,6 +11,25 @@
   }
 }
 
+@keyframes slide-from-left {
+  0% {
+    transform: translate(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+.animated-from-left {
+  animation: slide-from-left 1.25s 1;
+}
+
+.animated-from-right {
+  animation: slide-from-right 1.25s 1;
+}
+
 #project-cards {
   height: 55vh;
   width: 100vw;
@@ -20,15 +39,15 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  animation-name: slide-from-right;
-  animation-duration: 1.25s;
+  // animation-name: slide-from-right;
+  // animation-duration: 1.25s;
 
   .card {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 45vh;
+    min-height: 45vh;
     width: 25vw;
     text-align: center;
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.452);

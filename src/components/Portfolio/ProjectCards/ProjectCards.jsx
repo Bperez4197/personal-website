@@ -5,9 +5,9 @@ import "./styles.scss";
 // image, title, description, github and live links
 //use modals. short desc, small img, no technologies listed for small version
 // Links are larger
-export default function ProjectCard() {
+export default function ProjectCard({ isVisible }) {
   return (
-    <div id="project-cards">
+    <div id="project-cards" className={isVisible ? "animated-from-left" : ""}>
       <div className="card">
         <img src={require("../../../images/aboutPic.jfif")} alt="Code editor" />
         <div className="card-content">

@@ -1,16 +1,43 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Element } from "react-scroll";
 
 import "./styles.scss";
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  const addVisibility = (entries) => {
+    const [entry] = entries;
+    setIsVisible(entry.isIntersecting);
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(addVisibility, {});
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [sectionRef]);
+
   return (
     <Element name="about">
-      <section id="about">
-        <div className="about-img">
+      <section id="about" ref={sectionRef}>
+        <div
+          className={isVisible ? " about-img animated-from-left" : "about-img"}
+        >
           <img src={require("../../images/aboutPic.jfif")} alt="Code editor" />
         </div>
-        <div className="about-content">
+        <div
+          className={
+            isVisible ? " about-content animated-from-right" : "about-content"
+          }
+        >
           <h3 id="about-title">Here's a bit about me</h3>
           <p id="about-msg">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem

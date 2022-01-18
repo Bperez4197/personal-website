@@ -1,1 +1,84 @@
 @import "../../styling-variables/index.scss";
+
+@keyframes animate-from-top {
+  0% {
+    transform: translate(0, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#sticky-nav {
+  position: fixed;
+  top: 0;
+  background-color: #4ecca2f3;
+  color: black;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  animation: animate-from-top 0.7s 1;
+  z-index: 10;
+
+  .active {
+    background-color: $white;
+
+    li {
+      &hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+
+  li {
+    color: black;
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+}
+
+.home-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  width: 40vw;
+  animation-name: slide-from-right;
+  animation-duration: 1.25s;
+
+  #resume {
+    background-color: $white;
+    color: black;
+    text-decoration: underline;
+
+    &:hover {
+      background-color: $teal;
+    }
+  }
+
+  li {
+    height: 25px;
+    width: 75px;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $teal;
+      text-decoration: underline;
+      color: black;
+    }
+  }
+}
+
+.active {
+  color: black;
+  text-decoration: underline;
+  background-color: $teal;
+  font-weight: $thick;
+}

@@ -23,10 +23,10 @@ function App() {
             <GitHubIcon fontSize="large" style={{ color: "black" }} />
           </a>
           <a href="#">
-            <LinkedInIcon fontSize="large" />
+            <LinkedInIcon fontSize="large" style={{ color: "black" }} />
           </a>
           <a href="#">
-            <EmailIcon fontSize="large" />
+            <EmailIcon fontSize="large" style={{ color: "black" }} />
           </a>
         </div>
       </footer>

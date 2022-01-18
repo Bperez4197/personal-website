@@ -1,25 +1,63 @@
 import React from "react";
+import { Link } from "react-scroll";
 
-export default function Header() {
+import "./styles.scss";
+
+export default function Header({ isVisible }) {
   return (
-    <header>
-      <ul>
-        <a href="#home">
-          <li>Home |</li>
-        </a>
-        <a href="#about">
-          <li>About |</li>
-        </a>
-        <a href="#skills">
-          <li>Skills |</li>
-        </a>
-        <a href="#portfolio">
-          <li>Portfolio |</li>
-        </a>
-        <a href="#contact">
-          <li>Contact |</li>
-        </a>
-        <a href="#" target="_blank">
+    <header id={isVisible ? "active" : "sticky-nav"}>
+      <ul className="home-header">
+        <Link
+          to="home"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={1000}
+        >
+          <li>Home</li>
+        </Link>
+        <span>|</span>
+        <Link
+          to="about"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={1000}
+        >
+          <li>About</li>
+        </Link>
+        <span>|</span>
+        <Link
+          to="skills"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={1000}
+        >
+          <li>Skills</li>
+        </Link>
+        <span>|</span>
+        <Link
+          to="portfolio"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={1000}
+        >
+          <li>Portfolio</li>
+        </Link>
+        <span>|</span>
+        <Link
+          to="contact"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={1000}
+        >
+          <li>Contact</li>
+        </Link>
+        <span>|</span>
+        <a href="#" target="_blank" id="resume" id="resume">
           <li>Resume</li>
         </a>
       </ul>

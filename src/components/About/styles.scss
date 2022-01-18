@@ -43,11 +43,14 @@
   .about-img {
     height: 40vh;
     width: 60vw;
-    // animation-name: slide-from-left;
-    // animation-duration: 1.25s;
+
     img {
       height: 100%;
       width: 100%;
+      border: 1px solid $white;
+      border-radius: 25px;
+      overflow: hidden;
+      margin-top: 10vh;
     }
   }
 
@@ -56,7 +59,27 @@
     width: 60vw;
     padding-left: 5vw;
     padding-right: 5vw;
-    // animation-name: slide-from-right;
-    // animation-duration: 1.25s;
+    margin-bottom: 7vh;
+
+    h3 {
+      font-family: $fancy-font;
+      font-weight: $medium-thick;
+      font-size: 52px;
+      color: black;
+      margin-bottom: 5vh;
+      text-decoration: underline;
+
+      span {
+        color: $teal;
+        font-family: $fancy-font;
+        font-weight: $medium-thick;
+        font-size: 52px;
+      }
+    }
+
+    p {
+      font-weight: $medium;
+      font-size: 18px;
+    }
   }
 }

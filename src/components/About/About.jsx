@@ -38,7 +38,9 @@ export default function About() {
             isVisible ? " about-content animated-from-right" : "about-content"
           }
         >
-          <h3 id="about-title">Here's a bit about me</h3>
+          <h3 id="about-title">
+            A bit <span>about</span> me
+          </h3>
           <p id="about-msg">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem
             sapiente necessitatibus expedita perferendis ea officiis est

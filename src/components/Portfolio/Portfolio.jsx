@@ -39,7 +39,7 @@ export default function Portfolio() {
               : "portfolio-header"
           }
         >
-          Portfolio Section
+          My Portfolio
         </h3>
         <h5
           className={
@@ -48,7 +48,7 @@ export default function Portfolio() {
               : "projects-header"
           }
         >
-          Most Recent Projects
+          Most <span>Recent</span> Projects
         </h5>
         <div className="card-container">
           <Cards isVisible={isVisible} />
@@ -60,7 +60,7 @@ export default function Portfolio() {
               : "projects-header"
           }
         >
-          Older Projects
+          <span>Older</span> Projects
         </h5>
         <div className="card-container">
           <OldCards isVisible={isVisible} />

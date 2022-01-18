@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <section ref={sectionRef}>
       <Element name="contact">
-        <h2>Contact Section</h2>
+        <h2>Contact Me</h2>
         <div className="contact">
           <div
             className={

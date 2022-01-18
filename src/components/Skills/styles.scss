@@ -22,8 +22,148 @@
   }
 }
 
+@keyframes animate-from-bottom {
+  0% {
+    transform: translate(0, 50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.animated-from-bottom {
+  animation: animate-from-bottom 1.25s 1;
+}
+
+.animated-from-left {
+  animation: slide-from-left 0.7s 1;
+}
+
+.animated-from-right {
+  animation: slide-from-right 0.7s 1;
+}
+
 #skills {
-  height: 80vh;
+  height: 100vh;
   width: 100vw;
   background-color: $lighter-grey;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10vh;
+
+  h3 {
+    margin-bottom: 2.5vh;
+    font-family: $fancy-font;
+    font-size: 48px;
+    text-decoration: underline;
+  }
+
+  .tabbed-component {
+    background-color: $white;
+    color: black;
+    height: 100%;
+    width: 60vw;
+    padding: 20px 20px 20px 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.425);
+
+    .options-container {
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-bottom: 2.5vh;
+
+      .option {
+        display: inline;
+        cursor: pointer;
+        border: 1px solid rgba(128, 128, 128, 0.527);
+        border-radius: 3px;
+        height: 5vh;
+        width: 8vw;
+        text-align: center;
+        padding-top: 15px;
+        box-shadow: 3px 3px 3px #888888;
+
+        &:hover {
+          background-color: black;
+          color: $teal;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      height: 75px;
+      width: 100%;
+      border-top: 1px solid grey;
+      padding-top: 2.5vh;
+      padding-left: 10px;
+
+      h4 {
+        font-weight: $medium;
+        padding-top: 10px;
+        text-decoration: underline;
+        font-size: 18px;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-flow: row wrap;
+        height: 20vh;
+        margin: 2.5vh 0;
+        .skill-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+
+          .image {
+            height: 75px;
+            width: 75px;
+            color: black;
+            font-size: 70px;
+            margin-bottom: 5px;
+
+            &:hover {
+              color: $teal;
+              transform: scale(1.1);
+            }
+          }
+
+          h6 {
+            color: $teal;
+            font-size: 16px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.active-tab {
+  background-color: $teal;
+  text-decoration: underline;
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 5vh;
+  width: 8vw;
+  font-weight: $thick;
+  padding-top: 10px;
+  text-align: center;
 }

@@ -34,9 +34,7 @@ export default function Skills() {
   return (
     <Element name="skills">
       <section id="skills" ref={sectionRef}>
-        <h3 className={isVisible ? "animated-from-right" : ""}>
-          Technical Skills
-        </h3>
+        <h3>Technical Skills</h3>
         <Tabs className="tabbed-component">
           <TabList className="options-container">
             <Tab

@@ -32,15 +32,7 @@ export default function Portfolio() {
   return (
     <Element name="portfolio">
       <section id="portfolio" ref={sectionRef}>
-        <h3
-          className={
-            isVisible
-              ? "portfolio-header animated-from-right"
-              : "portfolio-header"
-          }
-        >
-          My Portfolio
-        </h3>
+        <h3 className="portfolio-header">My Portfolio</h3>
         <h5
           className={
             isVisible

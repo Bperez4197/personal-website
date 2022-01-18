@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 import "./styles.scss";
 
@@ -48,7 +50,7 @@ export default function ProjectCard({ isVisible }) {
           </p>
         </div>
       </div>
-      <div className="card" onClick={() => openModal(2)}>
+      <div className="card" id="coming-soon" onClick={() => openModal(2)}>
         <img
           src={require("../../../images/comingSoon.jfif")}
           alt="Code editor"
@@ -93,6 +95,14 @@ export default function ProjectCard({ isVisible }) {
               Ducimus non eligendi facere quo nobis quibusdam numquam nostrum
               vel in! Repellendus!
             </p>
+            <div className="links">
+              <a href="#" target="_blank">
+                <GitHubIcon fontSize="large" />
+              </a>
+              <a href="#" target="_blank">
+                <OpenInNewIcon fontSize="large" />
+              </a>
+            </div>
           </div>
         </div>
       ) : (
@@ -124,6 +134,14 @@ export default function ProjectCard({ isVisible }) {
               Ducimus non eligendi facere quo nobis quibusdam numquam nostrum
               vel in! Repellendus!
             </p>
+            <div className="links">
+              <a href="#" target="_blank">
+                <GitHubIcon fontSize="large" />
+              </a>
+              <a href="#" target="_blank">
+                <OpenInNewIcon fontSize="large" />
+              </a>
+            </div>
           </div>
         </div>
       ) : (
@@ -155,6 +173,14 @@ export default function ProjectCard({ isVisible }) {
               Ducimus non eligendi facere quo nobis quibusdam numquam nostrum
               vel in! Repellendus!
             </p>
+            <div className="links">
+              <a href="#" target="_blank">
+                <GitHubIcon fontSize="large" />
+              </a>
+              <a href="#" target="_blank">
+                <OpenInNewIcon fontSize="large" />
+              </a>
+            </div>
           </div>
         </div>
       ) : (

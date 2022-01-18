@@ -31,6 +31,14 @@
   }
 }
 
+@keyframes spin {
+  0% {
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .animated-from-left {
   animation: slide-from-left 1.25s 1;
 }
@@ -44,7 +52,7 @@
 }
 
 .contact {
-  height: 80vh;
+  height: 70vh;
   width: 100vw;
   background-color: $dark-grey;
   display: flex;
@@ -71,8 +79,9 @@
       height: 33%;
       width: 100%;
       color: $teal;
-      // animation-name: slide-from-left;
-      // animation-duration: 1.25s;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
       a {
         color: $teal;
@@ -133,17 +142,15 @@
 
       span {
         padding-top: 5px;
+
+        .check {
+          transition: spin 1s ease-in-out;
+        }
       }
 
       &:hover {
         transform: scale(1.1);
         color: $white;
-
-        // span {
-        //   // animation-name: bounce-right;
-        //   // animation-duration: 1s;
-        //   // animation-iteration-count: infinite;
-        // }
       }
     }
   }

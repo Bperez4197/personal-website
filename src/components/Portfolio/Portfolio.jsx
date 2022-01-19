@@ -9,6 +9,8 @@ import "./styles.scss";
 // seperate categories for Most recent and older projects
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState(false);
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+  const [count, setCount] = useState(0);
   const sectionRef = useRef(null);
 
   const addVisibility = (entries) => {
@@ -29,13 +31,21 @@ export default function Portfolio() {
     };
   }, [sectionRef]);
 
+  useEffect(() => {
+    if (isVisible && !count) {
+      setCount(1);
+    } else if (isVisible && count) {
+      setAnimationTriggered(true);
+    }
+  }, [isVisible]);
+
   return (
     <Element name="portfolio">
       <section id="portfolio" ref={sectionRef}>
         <h3 className="portfolio-header">My Portfolio</h3>
         <h5
           className={
-            isVisible
+            isVisible && !animationTriggered
               ? "projects-header animated-from-right"
               : "projects-header"
           }
@@ -43,11 +53,17 @@ export default function Portfolio() {
           Most <span>Recent</span> Projects
         </h5>
         <div className="card-container">
-          <Cards isVisible={isVisible} />
+          <Cards
+            isVisible={isVisible}
+            count={count}
+            setCount={setCount}
+            animationTriggered={animationTriggered}
+            setAnimationTriggered={setAnimationTriggered}
+          />
         </div>
         <h5
           className={
-            isVisible
+            isVisible && !animationTriggered
               ? "projects-header animated-from-right"
               : "projects-header"
           }
@@ -55,7 +71,13 @@ export default function Portfolio() {
           <span>Older</span> Projects
         </h5>
         <div className="card-container">
-          <OldCards isVisible={isVisible} />
+          <OldCards
+            isVisible={isVisible}
+            count={count}
+            setCount={setCount}
+            animationTriggered={animationTriggered}
+            setAnimationTriggered={setAnimationTriggered}
+          />
         </div>
       </section>
     </Element>

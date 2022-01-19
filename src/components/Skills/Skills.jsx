@@ -11,6 +11,8 @@ import "./styles.scss";
 export default function Skills() {
   const [tabIndex, setTabIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+  const [count, setCount] = useState(0);
   const sectionRef = useRef(null);
 
   const addVisibility = (entries) => {
@@ -30,6 +32,14 @@ export default function Skills() {
       }
     };
   }, [sectionRef]);
+
+  useEffect(() => {
+    if (isVisible && !count) {
+      setCount(1);
+    } else if (isVisible && count) {
+      setAnimationTriggered(true);
+    }
+  }, [isVisible]);
 
   return (
     <Element name="skills">
@@ -71,9 +81,9 @@ export default function Skills() {
 
           <TabPanel
             className={
-              tabIndex === 0 && isVisible
+              tabIndex === 0 && isVisible && !animationTriggered
                 ? "panel panel-all animated-from-bottom"
-                : "hidden"
+                : "panel panel-all"
             }
           >
             <h4>Tools I am comfortable with:</h4>

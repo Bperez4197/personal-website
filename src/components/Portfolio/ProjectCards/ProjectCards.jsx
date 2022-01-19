@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -7,7 +7,13 @@ import "./styles.scss";
 // image, title, description, github and live links
 //use modals. short desc, small img, no technologies listed for small version
 // Links are larger
-export default function ProjectCard({ isVisible }) {
+export default function ProjectCard({
+  isVisible,
+  animationTriggered,
+  setAnimationTriggered,
+  count,
+  setCount,
+}) {
   const [index, setIndex] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,8 +26,19 @@ export default function ProjectCard({ isVisible }) {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    if (isVisible && !count) {
+      setCount(1);
+    } else if (isVisible && count) {
+      setAnimationTriggered(true);
+    }
+  }, [isVisible]);
+
   return (
-    <div id="project-cards" className={isVisible ? "animated-from-left" : ""}>
+    <div
+      id="project-cards"
+      className={isVisible && !animationTriggered ? "animated-from-left" : ""}
+    >
       <div className="card" onClick={() => openModal(0)}>
         <img src={require("../../../images/aboutPic.jfif")} alt="Code editor" />
         <div className="card-content">

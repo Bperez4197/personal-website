@@ -12,6 +12,8 @@ import "./styles.scss";
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
   const [sent, setIsSent] = useState(false);
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+  const [count, setCount] = useState(0);
   const sectionRef = useRef(null);
 
   const addVisibility = (entries) => {
@@ -31,6 +33,14 @@ export default function Contact() {
       }
     };
   }, [sectionRef]);
+
+  useEffect(() => {
+    if (isVisible && !count) {
+      setCount(1);
+    } else if (isVisible && count) {
+      setAnimationTriggered(true);
+    }
+  }, [isVisible]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,7 +67,9 @@ export default function Contact() {
         <div className="contact">
           <div
             className={
-              isVisible ? "contact-info animated-from-left" : "contact-info"
+              isVisible && !animationTriggered
+                ? "contact-info animated-from-left"
+                : "contact-info"
             }
           >
             <div className="info-block">
@@ -77,7 +89,9 @@ export default function Contact() {
           </div>
           <form
             id="myForm"
-            className={isVisible ? "animated-from-right" : ""}
+            className={
+              isVisible && !animationTriggered ? "animated-from-right" : ""
+            }
             onSubmit={handleSubmit}
           >
             <input

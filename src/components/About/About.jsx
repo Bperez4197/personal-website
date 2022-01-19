@@ -5,6 +5,8 @@ import "./styles.scss";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+  const [count, setCount] = useState(0);
   const sectionRef = useRef(null);
 
   const addVisibility = (entries) => {
@@ -25,17 +27,31 @@ export default function About() {
     };
   }, [sectionRef]);
 
+  useEffect(() => {
+    if (isVisible && !count) {
+      setCount(1);
+    } else if (isVisible && count) {
+      setAnimationTriggered(true);
+    }
+  }, [isVisible]);
+
   return (
     <Element name="about">
       <section id="about" ref={sectionRef}>
         <div
-          className={isVisible ? " about-img animated-from-left" : "about-img"}
+          className={
+            isVisible && !animationTriggered
+              ? " about-img animated-from-left"
+              : "about-img"
+          }
         >
           <img src={require("../../images/aboutPic.jfif")} alt="Code editor" />
         </div>
         <div
           className={
-            isVisible ? " about-content animated-from-right" : "about-content"
+            isVisible && !animationTriggered
+              ? " about-content animated-from-right"
+              : "about-content"
           }
         >
           <h3 id="about-title">

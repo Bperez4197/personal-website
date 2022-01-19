@@ -40,44 +40,51 @@ export default function OldProjectCards({
       className={isVisible && !animationTriggered ? "animated-from-left" : ""}
     >
       <div className="card" onClick={() => openModal(3)}>
-        <img src={require("../../../images/aboutPic.jfif")} alt="Code editor" />
+        <img
+          src={require("../../../images/ecommProjPic.PNG")}
+          alt="Code editor"
+        />
         <div className="card-content">
           <h3>Title:</h3>
-          <p>E-commerce App</p>
+          <p>E-commerce Clothing App</p>
           <h4>Description:</h4>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-            iure deserunt necessitatibus quia natus consequatur quas odit a
-            optio esse magni ex alias asperiores earum eum quisquam, saepe
-            temporibus! Soluta.
+            This is a Frontend e-commerce application that utilizes React
+            without hooks and Redux. The app includes a self-built cart system
+            and a payment system from stripe. It also includes user
+            authentication and a basic database through firebase.
           </p>
         </div>
       </div>
-      <div className="card" onClick={() => openModal(4)}>
-        <img src={require("../../../images/aboutPic.jfif")} alt="Code editor" />
+      <div className="card" onClick={() => openModal(5)}>
+        <img
+          src={require("../../../images/bankProjPic.PNG")}
+          alt="Code editor"
+        />
         <div className="card-content">
           <h3>Title:</h3>
           <p>Bank Website</p>
           <h4>Description:</h4>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-            iure deserunt necessitatibus quia natus consequatur quas odit a
-            optio esse magni ex alias asperiores earum eum quisquam, saepe
-            temporibus! Soluta.
+            This is a Frontend website for a bank. I started with an html/css
+            template, but built all of the javascript and DOM manipulation.
           </p>
         </div>
       </div>
-      <div className="card" onClick={() => openModal(5)}>
-        <img src={require("../../../images/aboutPic.jfif")} alt="Code editor" />
+      <div className="card" onClick={() => openModal(4)}>
+        <img
+          src={require("../../../images/bjjProjPic.PNG")}
+          alt="Code editor"
+        />
         <div className="card-content">
           <h3>Title:</h3>
-          <p>Workout Tracker</p>
+          <p>BJJ Gear Inc.</p>
           <h4>Description:</h4>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-            iure deserunt necessitatibus quia natus consequatur quas odit a
-            optio esse magni ex alias asperiores earum eum quisquam, saepe
-            temporibus! Soluta.
+            This is a Frontend e-commerce site to buy Brazilian Jiu-Jitsu gear
+            that utilizes plain ole' HTML, CSS, and Javascript. There is no cart
+            system but payments are handled by Paypal. This is an early project
+            I did for school.
           </p>
         </div>
       </div>
@@ -88,73 +95,45 @@ export default function OldProjectCards({
       {isOpen && index === 3 ? (
         <div className="modal-card">
           <img
-            src={require("../../../images/aboutPic.jfif")}
+            src={require("../../../images/ecommProjPic.PNG")}
             alt="Code editor"
           />
           <div className="modal-card-content">
             <h3>Title:</h3>
-            <p>E-commerce App</p>
+            <p>E-commerce Clothing App</p>
             <h4>Tools Used:</h4>
             <p>
-              Javascript, HTML, CSS, React, Redux, MongoDB, Sass, express,
-              axios, Material UI, React-Router, Filebase64, Mongoose
+              Javascript, HTML, CSS, React, Redux, Sass, React-Router, Firebase,
+              Stripe, git, Github
             </p>
             <h4>Description:</h4>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-              iure deserunt necessitatibus quia natus consequatur quas odit a
-              optio esse magni ex alias asperiores earum eum quisquam, saepe
-              temporibus! Soluta. Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Repudiandae voluptas deleniti maxime
-              reprehenderit architecto aspernatur fugit eum minus numquam
-              ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Ducimus non eligendi facere quo nobis quibusdam numquam nostrum
-              vel in! Repellendus!
+              This is a Frontend e-commerce application for buying clothing. It
+              uses the older style of React without hooks, using component
+              lifecycle methods, and more class components. The app also
+              utilizes Redux for state management, Firebase for authentication
+              and database, and Stripe for payment. Building this application
+              gave me an introductory understanding of many technologies, but
+              excelled at teaching me to do better web research and most
+              importantly - read documentation. At this stage I was still
+              learning about state, react-router, and props, so I had to read a
+              ton of documentation for both React, React Router, and Redux. I
+              think this app could be improved in many ways, but the first thing
+              I would do is utilize MongoDB instead of firebase for both user
+              accounts and clothing objects, build a backend with express, and
+              set up apis to make the app Fullstack.
             </p>
             <div className="links">
-              <a href="#" target="_blank">
+              <a
+                href="https://github.com/Bperez4197/Crown-Clothing"
+                target="_blank"
+              >
                 <GitHubIcon fontSize="large" />
               </a>
-              <a href="#" target="_blank">
-                <OpenInNewIcon fontSize="large" />
-              </a>
-            </div>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
-      {isOpen && index === 4 ? (
-        <div className="modal-card">
-          <img
-            src={require("../../../images/aboutPic.jfif")}
-            alt="Code editor"
-          />
-          <div className="modal-card-content">
-            <h3>Title:</h3>
-            <p>Bank Website</p>
-            <h4>Tools Used:</h4>
-            <p>
-              Javascript, HTML, CSS, React, Redux, MongoDB, Sass, express,
-              axios, Material UI, React-Router, Filebase64, Mongoose
-            </p>
-            <h4>Description:</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-              iure deserunt necessitatibus quia natus consequatur quas odit a
-              optio esse magni ex alias asperiores earum eum quisquam, saepe
-              temporibus! Soluta. Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Repudiandae voluptas deleniti maxime
-              reprehenderit architecto aspernatur fugit eum minus numquam
-              ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Ducimus non eligendi facere quo nobis quibusdam numquam nostrum
-              vel in! Repellendus!
-            </p>
-            <div className="links">
-              <a href="#" target="_blank">
-                <GitHubIcon fontSize="large" />
-              </a>
-              <a href="#" target="_blank">
+              <a
+                href="https://bperez-react-ecommerce.netlify.app/"
+                target="_blank"
+              >
                 <OpenInNewIcon fontSize="large" />
               </a>
             </div>
@@ -166,34 +145,78 @@ export default function OldProjectCards({
       {isOpen && index === 5 ? (
         <div className="modal-card">
           <img
-            src={require("../../../images/aboutPic.jfif")}
+            src={require("../../../images/bankProjPic.PNG")}
             alt="Code editor"
           />
           <div className="modal-card-content">
             <h3>Title:</h3>
-            <p>Workout Tracker</p>
+            <p>Bank Website</p>
             <h4>Tools Used:</h4>
-            <p>
-              Javascript, HTML, CSS, React, Redux, MongoDB, Sass, express,
-              axios, Material UI, React-Router, Filebase64, Mongoose
-            </p>
+            <p>Javascript, IntersectionObserver Api, git, Github</p>
             <h4>Description:</h4>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-              iure deserunt necessitatibus quia natus consequatur quas odit a
-              optio esse magni ex alias asperiores earum eum quisquam, saepe
-              temporibus! Soluta. Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Repudiandae voluptas deleniti maxime
-              reprehenderit architecto aspernatur fugit eum minus numquam
-              ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Ducimus non eligendi facere quo nobis quibusdam numquam nostrum
-              vel in! Repellendus!
+              This is a Frontend website for a bank. I started with an html/css
+              template, but built all of the javascript and DOM manipulation.
+              This project taught me a ton about DOM manipulation and expanded
+              my knowledge of javascript fundamentals. I implemented a tabbed
+              component, sticky nav, a slider, a modal, lazy loading images, and
+              smooth scrolling. I think this project could be improved by making
+              the design responsive and if I were to do it today I wouldn't use
+              a template.
             </p>
             <div className="links">
-              <a href="#" target="_blank">
+              <a
+                href="https://github.com/Bperez4197/Bank-Website"
+                target="_blank"
+              >
                 <GitHubIcon fontSize="large" />
               </a>
-              <a href="#" target="_blank">
+              <a
+                href="https://bperez-vanillajs-bank.netlify.app/"
+                target="_blank"
+              >
+                <OpenInNewIcon fontSize="large" />
+              </a>
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+      {isOpen && index === 4 ? (
+        <div className="modal-card">
+          <img
+            src={require("../../../images/bjjProjPic.PNG")}
+            alt="Code editor"
+          />
+          <div className="modal-card-content">
+            <h3>Title:</h3>
+            <p>BJJ Gear Inc.</p>
+            <h4>Tools Used:</h4>
+            <p>HTML, CSS, Javascript, Paypal, git, Github</p>
+            <h4>Description:</h4>
+            <p>
+              This is a Frontend e-commerce site to buy Brazilian Jiu-Jitsu
+              gear. I used just plain HTML, CSS, and Javascript to build the
+              client side and the backend payment system is handled by Paypal.
+              Building this app got me more comfortable with HTML and CSS but at
+              a lower level. I did implement responsive design on the products
+              page, but at this stage I was still experimenting with both
+              styling and DOM manipulation. This application could be improved
+              in a myriad of ways and I would probably just start from scratch
+              if I was going to build it today.
+            </p>
+            <div className="links">
+              <a
+                href="https://github.com/Bperez4197/BJJ-Website"
+                target="_blank"
+              >
+                <GitHubIcon fontSize="large" />
+              </a>
+              <a
+                href="https://bperez-first-site-bjj-gear.netlify.app/index.html"
+                target="_blank"
+              >
                 <OpenInNewIcon fontSize="large" />
               </a>
             </div>

@@ -17,7 +17,7 @@ function App() {
       <Portfolio />
       <Contact />
       <footer>
-        <p>Don't steal my site dude.</p>
+        <p>&#169; This website was created and is maintained by Bryce Perez.</p>
         <div className="icons">
           <a href="https://github.com/Bperez4197" target="_blank">
             <GitHubIcon fontSize="large" style={{ color: "black" }} />
@@ -25,7 +25,7 @@ function App() {
           <a href="#">
             <LinkedInIcon fontSize="large" style={{ color: "black" }} />
           </a>
-          <a href="#">
+          <a href="mailto:perez.bryce31@gmail.com">
             <EmailIcon fontSize="large" style={{ color: "black" }} />
           </a>
         </div>

@@ -170,3 +170,32 @@ h2 {
   font-size: 52px;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 1019px) {
+  .contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact-info {
+      margin-bottom: 10px;
+      align-items: center;
+      justify-content: center;
+
+      .info-block {
+        a {
+          margin-right: 10px;
+        }
+
+        span {
+          width: 300px;
+          text-align: center;
+        }
+      }
+    }
+
+    form {
+      width: 340px;
+    }
+  }
+}

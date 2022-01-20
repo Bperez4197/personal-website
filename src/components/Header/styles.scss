@@ -82,3 +82,9 @@
   background-color: $teal;
   font-weight: $thick;
 }
+
+@media screen and (max-width: 1019px) {
+  #sticky-nav {
+    display: none;
+  }
+}

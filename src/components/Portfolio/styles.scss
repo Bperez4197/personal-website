@@ -34,9 +34,10 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  height: 1400px;
+  height: 100%;
   width: 100vw;
   padding-top: 5vh;
+  padding-bottom: 5vh;
 
   .portfolio-header {
     width: 100vw;
@@ -56,6 +57,7 @@
     font-weight: $medium-thick;
     font-size: 42px;
     text-decoration: underline;
+    // margin-bottom: 10px;
 
     span {
       font-family: $fancy-font;

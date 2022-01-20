@@ -50,9 +50,8 @@ export default function ProjectCard({
           <h4>Description:</h4>
           <p>
             This is a Fullstack CRUD application for creating memes. I utilized
-            several tools including React/Redux on the frontend and
-            express/node.js on the backend. The architecture follows the MVC
-            guidelines and the Apis are RESTful.
+            several tools including React/Redux on the frontend, MongoDb for the
+            database, and express/node.js on the backend.
           </p>
         </div>
       </div>

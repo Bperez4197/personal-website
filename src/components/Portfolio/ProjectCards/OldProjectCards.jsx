@@ -67,7 +67,9 @@ export default function OldProjectCards({
           <h4>Description:</h4>
           <p>
             This is a Frontend website for a bank. I started with an html/css
-            template, but built all of the javascript and DOM manipulation.
+            template, but built all of the javascript. I was able to become
+            familiar with many DOM manipulation techniques and the
+            IntersectionObserver Api.
           </p>
         </div>
       </div>

@@ -69,9 +69,11 @@
   .contact-info {
     height: 25vh;
     width: 40vw;
+    max-width: 400px;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
     // animation-name: slide-from-left;
     // animation-duration: 1.25s;
 
@@ -82,6 +84,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      margin-right: 50px;
 
       a {
         color: $teal;
@@ -96,6 +99,7 @@
   form {
     height: 40vh;
     width: 80vw;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -103,6 +107,7 @@
     padding: 2rem;
     border: 4px solid $lighter-grey;
     border-radius: 25px;
+    margin-left: 50px;
 
     #message {
       height: 10vh;
@@ -116,6 +121,7 @@
       background-color: $dark-grey;
       width: 100%;
       color: $white;
+      margin-bottom: 5px;
 
       &::placeholder {
         color: lightgrey;

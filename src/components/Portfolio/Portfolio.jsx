@@ -77,6 +77,7 @@ export default function Portfolio() {
             setCount={setCount}
             animationTriggered={animationTriggered}
             setAnimationTriggered={setAnimationTriggered}
+            // style={{ marginBottom: "25px" }}
           />
         </div>
       </section>

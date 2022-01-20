@@ -526,6 +526,10 @@ export default function Skills() {
                 </div>
                 <h6>MVC</h6>
               </div>
+              <div className="skill-container">
+                <i className="devicon-heroku-original image"></i>
+                <h6>Heroku</h6>
+              </div>
             </div>
             <h4>Tools I have been exposed to:</h4>
             <div className="skills-container">

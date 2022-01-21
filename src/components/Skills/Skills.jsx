@@ -57,33 +57,35 @@ export default function Skills() {
               className={tabIndex === 1 ? "option active-tab" : "option"}
               onClick={() => setTabIndex(1)}
             >
-              Front End
+              <h4>Front End</h4>
             </Tab>
             <Tab
               className={tabIndex === 2 ? "option active-tab" : "option"}
               onClick={() => setTabIndex(2)}
             >
-              Back End
+              <h4>Back End</h4>
             </Tab>
             <Tab
               className={tabIndex === 3 ? "option active-tab" : "option"}
               onClick={() => setTabIndex(3)}
             >
-              Databases
+              <h4>Databases</h4>
             </Tab>
             <Tab
               className={tabIndex === 4 ? "option active-tab" : "option"}
               onClick={() => setTabIndex(4)}
             >
-              Misc.
+              <h4>Misc.</h4>
             </Tab>
           </TabList>
 
           <TabPanel
             className={
-              tabIndex === 0 && isVisible && !animationTriggered
-                ? "panel panel-all animated-from-bottom"
-                : "panel panel-all"
+              isVisible && tabIndex === 0
+                ? !animationTriggered
+                  ? "panel panel-all animated-from-bottom"
+                  : "panel"
+                : "hidden"
             }
           >
             <h4>Tools I am comfortable with:</h4>
@@ -192,16 +194,6 @@ export default function Skills() {
                 </div>
                 <h6>Command Line</h6>
               </div>
-              <div className="skill-container">
-                <div className="image">
-                  <img
-                    className="image"
-                    src={require("../../images/mvc.jfif")}
-                    alt="MVC architecture"
-                  />
-                </div>
-                <h6>MVC</h6>
-              </div>
             </div>
             <h4>Tools I have been exposed to:</h4>
             <div className="skills-container">
@@ -307,16 +299,6 @@ export default function Skills() {
                   <PaymentIcon fontSize="medium" className="image" />
                 </div>
                 <h6>Stripe</h6>
-              </div>
-              <div className="skill-container">
-                <div className="image">
-                  <img
-                    className="image"
-                    src={require("../../images/devcycle.jfif")}
-                    alt="Development Lifecycle"
-                  />
-                </div>
-                <h6>Dev Lifecycle</h6>
               </div>
             </div>
           </TabPanel>

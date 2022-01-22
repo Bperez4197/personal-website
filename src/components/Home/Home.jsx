@@ -5,6 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import EastRoundedIcon from "@mui/icons-material/EastRounded";
 import { Link, Element } from "react-scroll";
+import MobileHeader from "../Header/Mobile Header/MobileHeader";
 
 import "./styles.scss";
 
@@ -32,23 +33,17 @@ export default function Home() {
 
   return (
     <section id="home" ref={sectionRef}>
-      <Header isVisible={isVisible} />
+      {window.innerWidth < 1020 ? (
+        <MobileHeader />
+      ) : (
+        <Header isVisible={isVisible} />
+      )}
       <Element name="home">
         <div className="content">
           <h1 className="intro">Hi, I'm Bryce Perez.</h1>
+          <h6>full stack developer speciaizing in the front end</h6>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Voluptatibus, necessitatibus doloremque at veniam aut asperiores,
-            blanditiis quo cum a, et debitis nobis illum velit nam. Et totam
-            eligendi placeat sit aspernatur deserunt eius minus, alias adipisci
-            maxime nam? Dolor exercitationem cum a, id sit sunt enim architecto
-            fugit nobis doloremque deserunt, ab sapiente dicta quidem.
-            Recusandae quaerat voluptas velit ullam maxime! Beatae magnam
-            asperiores in iusto atque amet distinctio voluptas velit, libero
-            temporibus. Reiciendis omnis ut iste, quas accusantium labore ipsum
-            nemo, deserunt perspiciatis unde excepturi praesentium fugit
-            consectetur libero laboriosam nesciunt inventore illum perferendis
-            non rem? Nesciunt, aperiam voluptates?
+            Driven by curiousity and a love for learning, based in Glendale, AZ
           </p>
           <div className="icons">
             <a href="https://github.com/Bperez4197" target="_blank">

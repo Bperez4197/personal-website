@@ -61,7 +61,7 @@ export default function Contact() {
   };
 
   return (
-    <section ref={sectionRef}>
+    <section ref={sectionRef} id="contact">
       <Element name="contact">
         <h2>Contact Me</h2>
         <div className="contact">

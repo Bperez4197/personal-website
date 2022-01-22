@@ -57,10 +57,17 @@
       animation-name: slide-from-left;
       animation-duration: 1.25s;
     }
+    h6 {
+      text-transform: uppercase;
+      color: $teal;
+      font-size: 24px;
+      font-weight: $medium;
+    }
 
     p {
       animation-name: slide-from-right;
       animation-duration: 1.25s;
+      text-transform: uppercase;
     }
 
     .icons {

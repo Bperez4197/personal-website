@@ -67,11 +67,11 @@ export default function About() {
             <p>
               I have strong foundational skills that some developers overlook
               like understanding the basics of networking, http, javscript
-              engines, project architecture, OOP, reading documentation, and how
-              the internet works. I have become very adept at solving problems
-              with documentation and doing web research when I run into
-              roadblocks. I am always looking to work hard, learn new things,
-              and have growing ambition for my career.
+              engines, project architecture, OOP & Data Structures, reading
+              documentation, and how the internet works. I have become very
+              adept at solving problems with documentation and doing web
+              research when I run into roadblocks. I am always looking to work
+              hard, learn new things, and have growing ambition for my career.
             </p>
             <p>
               Outside of development I enjoy practicing Brazilian Jiu-Jitsu,

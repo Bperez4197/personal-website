@@ -1,0 +1,58 @@
+$teal: #4ecca3;
+$white: #eeeeee;
+
+@keyframes slide-from-right {
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+#mobile-header {
+  position: fixed;
+  top: 15px;
+  right: 30px;
+  width: 100%;
+  text-align: right;
+  z-index: 50;
+
+  .menu-icon {
+    background-color: black;
+    &:hover {
+      cursor: pointer;
+      color: $teal;
+    }
+  }
+
+  .menu {
+    text-align: left;
+    animation: slide-from-right 0.5s forwards;
+
+    ul {
+      width: 200px;
+      position: fixed;
+      top: 10px;
+      right: -75px;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-top: 10px;
+      background-color: black;
+
+      a {
+        &:hover {
+          cursor: default;
+          color: $white;
+          font-style: normal;
+        }
+        li {
+          margin-bottom: 10px;
+
+          &:hover {
+            color: $teal;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

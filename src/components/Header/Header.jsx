@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import resume from "../../images/BrycePerez_Resume.pdf";
 
 import "./styles.scss";
 
@@ -57,7 +58,7 @@ export default function Header({ isVisible }) {
           <li>Contact</li>
         </Link>
         <span>|</span>
-        <a href="#" target="_blank" id="resume" id="resume">
+        <a href={resume} target="_blank" id="resume" id="resume">
           <li>Resume</li>
         </a>
       </ul>

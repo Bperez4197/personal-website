@@ -22,7 +22,7 @@ function App() {
           <a href="https://github.com/Bperez4197" target="_blank">
             <GitHubIcon fontSize="large" style={{ color: "black" }} />
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/bryce-perez-077164230/">
             <LinkedInIcon fontSize="large" style={{ color: "black" }} />
           </a>
           <a href="mailto:perez.bryce31@gmail.com">

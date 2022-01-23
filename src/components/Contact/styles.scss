@@ -197,7 +197,7 @@ h2 {
 
     form {
       width: 95vw;
-      margin-left: 0;
+      margin: 0 20px 0 0;
 
       button {
         display: flex;
@@ -211,6 +211,15 @@ h2 {
           padding-left: 12px;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact {
+    form {
+      width: 100vw;
+      margin: 0;
     }
   }
 }

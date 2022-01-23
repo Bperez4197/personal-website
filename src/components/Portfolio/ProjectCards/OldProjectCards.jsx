@@ -95,7 +95,7 @@ export default function OldProjectCards({
         onClick={isOpen ? () => closeModal() : () => {}}
       ></div>
       {isOpen && index === 3 ? (
-        <div className="modal-card">
+        <div className="modal-card" onClick={closeModal}>
           <img
             src={require("../../../images/ecommProjPic.PNG")}
             alt="Code editor"
@@ -145,7 +145,7 @@ export default function OldProjectCards({
         ""
       )}
       {isOpen && index === 5 ? (
-        <div className="modal-card">
+        <div className="modal-card" onClick={closeModal}>
           <img
             src={require("../../../images/bankProjPic.PNG")}
             alt="Code editor"
@@ -186,7 +186,7 @@ export default function OldProjectCards({
         ""
       )}
       {isOpen && index === 4 ? (
-        <div className="modal-card">
+        <div className="modal-card" onClick={closeModal}>
           <img
             src={require("../../../images/bjjProjPic.PNG")}
             alt="Code editor"

@@ -100,7 +100,7 @@
 
     .about-img {
       margin-bottom: 15px;
-      width: 300px;
+      width: 350px;
       img {
         margin-top: 10px;
       }
@@ -119,5 +119,11 @@
         font-size: 16px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #about {
+    height: 125vh;
   }
 }

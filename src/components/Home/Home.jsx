@@ -49,7 +49,7 @@ export default function Home() {
             <a href="https://github.com/Bperez4197" target="_blank">
               <GitHubIcon fontSize="large" />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/bryce-perez-077164230/">
               <LinkedInIcon fontSize="large" />
             </a>
             <a href="mailto:perez.bryce31@gmail.com">

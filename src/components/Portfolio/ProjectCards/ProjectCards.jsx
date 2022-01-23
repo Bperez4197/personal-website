@@ -103,7 +103,7 @@ export default function ProjectCard({
         onClick={isOpen ? () => closeModal() : () => {}}
       ></div>
       {isOpen && index === 0 ? (
-        <div className="modal-card">
+        <div className="modal-card" onClick={closeModal}>
           <img
             src={require("../../../images/memeProjPic.PNG")}
             alt="Code editor"
@@ -152,7 +152,7 @@ export default function ProjectCard({
         ""
       )}
       {isOpen && index === 1 ? (
-        <div className="modal-card">
+        <div className="modal-card" onClick={closeModal}>
           <img
             src={require("../../../images/portfolioProjPic.PNG")}
             alt="Code editor"

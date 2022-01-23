@@ -124,6 +124,18 @@
 
 @media screen and (max-width: 450px) {
   #about {
-    height: 125vh;
+    height: 115vh;
+
+    .about-content {
+      p {
+        font-size: 14px;
+      }
+    }
   }
 }
+
+// @media screen and (max-height: 700) {
+//   #about {
+//     font-size: 14px;
+//   }
+// }

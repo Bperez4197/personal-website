@@ -216,31 +216,41 @@
   }
 
   .modal-card {
-    left: 92vw;
+    left: 92.5vw;
     top: 50vh;
     width: 90vw;
-    height: 92vh;
+    height: 950px;
+    padding-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 450px) {
   #project-cards {
-    height: 175vh;
+    height: 100%;
+    justify-content: flex-start;
+    margin-bottom: 25px;
   }
 
   .modal-card {
-    left: 115vw;
+    left: 118vw;
+    top: 55vh;
     width: 100vw;
     top: 60vh;
 
     .modal-card-content {
       h3,
       h4 {
-        font-size: 16px;
+        font-size: 18px;
       }
 
       p {
-        font-size: 13px;
+        font-size: 11px;
+      }
+
+      .links {
+        height: 25px;
+        width: 50px;
+        padding: 15px 0 0 0;
       }
     }
   }

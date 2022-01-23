@@ -192,7 +192,7 @@ export default function Skills() {
                     alt="Terminal Logo"
                   />
                 </div>
-                <h6>Command Line</h6>
+                <h6>Terminal</h6>
               </div>
             </div>
             <h4>Tools I have been exposed to:</h4>

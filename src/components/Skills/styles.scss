@@ -246,5 +246,14 @@
 @media screen and (max-width: 450px) {
   #skills {
     height: 1300px;
+
+    .tabbed-component {
+      .panel {
+        .skills-container {
+          padding-right: 15px;
+          padding-left: 5px;
+        }
+      }
+    }
   }
 }
